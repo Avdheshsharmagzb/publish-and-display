@@ -8,7 +8,7 @@ import {
 import { api, media, fmtDate } from "@/lib/api";
 import { CATEGORIES, categoryLabel, STATUS_PENDING, STATUS_PUBLISHED } from "@/constants/news";
 import {
-  Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter,
+  Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter,
 } from "@/components/ui/dialog";
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
@@ -123,6 +123,9 @@ export default function Admin() {
             <DialogContent className="bg-[#111827] border-slate-800 text-slate-100 max-w-lg max-h-[90vh] overflow-y-auto">
               <DialogHeader>
                 <DialogTitle className="font-serif text-2xl">Create Rewritten Article</DialogTitle>
+                <DialogDescription className="text-slate-400 font-mono text-[11px] uppercase tracking-wider">
+                  Saved as Rewritten_Pending_Publish · publish later to go live
+                </DialogDescription>
               </DialogHeader>
               <div className="space-y-4 py-2">
                 <div>
@@ -239,11 +242,16 @@ export default function Admin() {
               >
                 <div className="col-span-5 flex items-center gap-3 min-w-0">
                   <div className="relative w-14 h-14 shrink-0 overflow-hidden rounded bg-slate-800">
-                    <img
-                      src={media((isPending ? a.source_image_url : a.watermarked_image_url) || a.source_image_url)}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
+                    {(() => {
+                      const src = media((isPending ? a.source_image_url : a.watermarked_image_url) || a.source_image_url);
+                      return src ? (
+                        <img src={src} alt="" className="w-full h-full object-cover" />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-slate-600">
+                          <Newspaper size={18} />
+                        </div>
+                      );
+                    })()}
                   </div>
                   <p className="font-serif font-semibold text-sm leading-snug truncate">{a.title}</p>
                 </div>
