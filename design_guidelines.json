@@ -1,0 +1,103 @@
+{
+  "theme": "Editorial Swiss Modern & High-Density Admin Hub",
+  "design_archetype": "Swiss & High-Contrast Editorial Newspaper + Precision Dark Control Panel",
+  "typography": {
+    "font_family_heading": "Playfair Display, Cormorant Garamond, Georgia, serif",
+    "font_family_body": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "font_family_mono": "JetBrains Mono, Source Code Pro, monospace",
+    "hierarchy": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold tracking-tight leading-[1.1]",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-serif font-bold tracking-tight text-slate-900 dark:text-slate-100",
+      "h3_article_card": "text-lg sm:text-xl font-serif font-bold leading-snug hover:text-red-700 transition-colors duration-200",
+      "body_main": "text-base sm:text-lg leading-relaxed text-slate-800 dark:text-slate-200 font-sans",
+      "meta_labels": "text-xs uppercase tracking-[0.2em] font-mono font-semibold text-slate-500 dark:text-slate-400"
+    }
+  },
+  "colors": {
+    "palette_public": {
+      "paper_background": "#FDFCF7",
+      "paper_card": "#FFFFFF",
+      "ink_primary": "#0F172A",
+      "ink_secondary": "#475569",
+      "editorial_red": "#DC2626",
+      "editorial_red_dark": "#991B1B",
+      "warm_border": "#E2E8F0",
+      "category_badges": {
+        "politics": "bg-amber-100 text-amber-900 border-amber-300 dark:bg-amber-950 dark:text-amber-200",
+        "business": "bg-emerald-100 text-emerald-900 border-emerald-300 dark:bg-emerald-950 dark:text-emerald-200",
+        "technology": "bg-blue-100 text-blue-900 border-blue-300 dark:bg-blue-950 dark:text-blue-200",
+        "sports": "bg-orange-100 text-orange-900 border-orange-300 dark:bg-orange-950 dark:text-orange-200",
+        "entertainment": "bg-purple-100 text-purple-900 border-purple-300 dark:bg-purple-950 dark:text-purple-200",
+        "health": "bg-rose-100 text-rose-900 border-rose-300 dark:bg-rose-950 dark:text-rose-200"
+      }
+    },
+    "palette_admin": {
+      "surface_bg": "#0B0F17",
+      "card_surface": "#111827",
+      "card_border": "#1F2937",
+      "text_primary": "#F9FAFB",
+      "text_muted": "#9CA3AF",
+      "accent_publish_btn": "#22C55E",
+      "accent_publish_hover": "#16A34A",
+      "status_pending_badge": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+      "status_published_badge": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
+    }
+  },
+  "layout_and_grid": {
+    "public_homepage": {
+      "hero_layout": "grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-slate-200 pb-12 mb-12",
+      "hero_main_article": "lg:col-span-8 flex flex-col justify-between group cursor-pointer",
+      "hero_sidebar": "lg:col-span-4 flex flex-col space-y-6 lg:border-l lg:border-slate-200 lg:pl-8",
+      "category_section_grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8",
+      "newspaper_masthead": "border-b-4 border-slate-900 dark:border-slate-100 py-6 mb-8 text-center uppercase tracking-wider"
+    },
+    "admin_dashboard": {
+      "container": "min-h-screen bg-[#0B0F17] text-slate-100 font-sans p-6 sm:p-10",
+      "stats_grid": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8",
+      "table_container": "rounded-lg border border-slate-800 bg-[#111827] shadow-xl overflow-hidden"
+    }
+  },
+  "key_components": {
+    "watermark_overlay": {
+      "description": "Visual indicator on public and preview media items showing official publication seal.",
+      "css_classes": "absolute bottom-3 right-3 px-3 py-1 bg-black/75 backdrop-blur-md text-white font-mono text-[11px] uppercase tracking-widest border border-white/20 rounded shadow-lg flex items-center gap-1.5 pointer-events-none select-none z-10"
+    },
+    "publish_action_button": {
+      "description": "Primary action button in admin table for Rewritten_Pending_Publish items.",
+      "css_classes": "inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs rounded-md shadow-md transition-all transform active:scale-95 focus:ring-2 focus:ring-emerald-400 focus:outline-none"
+    },
+    "public_navigation": {
+      "description": "Sticky top bar with blurred background, news categories, search & admin portal toggle.",
+      "css_classes": "sticky top-0 z-50 bg-[#FDFCF7]/90 dark:bg-[#0B0F17]/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800"
+    }
+  },
+  "image_urls": {
+    "breaking_news_hero": "https://images.pexels.com/photos/10464787/pexels-photo-10464787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "reporter_live": "https://images.pexels.com/photos/10464798/pexels-photo-10464798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "politics_capitol": "https://images.unsplash.com/photo-1520525003249-2b9cdda513bc?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "business_capitol_dusk": "https://images.unsplash.com/photo-1594581979864-36977b15d0dc?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "technology_ai": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "tech_network_hands": "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  "testing_and_accessibility": {
+    "data_testid_convention": "kebab-case, role-based identifiers",
+    "required_test_ids": [
+      "public-nav-brand",
+      "category-filter-button-{category}",
+      "article-card-{id}",
+      "article-publish-date",
+      "article-watermarked-media",
+      "admin-publish-button-{id}",
+      "admin-status-badge-{id}",
+      "admin-create-article-modal-trigger",
+      "admin-news-form-submit-button"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Use JS React components (.js file extension) as specified by workspace conventions.",
+    "Implement both the public editorial news website experience and the sleek admin dashboard.",
+    "The 'Publish' action button on 'Rewritten_Pending_Publish' articles in the admin dashboard MUST transition the article status to 'Published', trigger a Sonner toast notification, and immediately display the article on the public homepage.",
+    "Render watermarked media badges on all published news photos on both public portal and admin preview.",
+    "Always ensure data-testid attributes are included on all interactive buttons, badges, links, and forms."
+  ]
+}
